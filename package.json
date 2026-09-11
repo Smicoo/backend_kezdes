@@ -1,0 +1,28 @@
+{
+  "name": "backend_kezdes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smicoo/backend_kezdes.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Smicoo/backend_kezdes/issues"
+  },
+  "homepage": "https://github.com/Smicoo/backend_kezdes#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "install": "^0.13.0",
+    "npm": "^12.0.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
