@@ -62,7 +62,7 @@ numbers.forEach(element => {
     console.log(element)
 });
 
-const user: [number,string,boolean] = [1, "Alice", true]
+const user1: [number,string,boolean] = [1, "Alice", true]
 
 enum Role{
     Admin,
@@ -73,3 +73,26 @@ enum Role{
 const userRole: Role = Role.User
 
 console.log(userRole)
+
+interface IUser{
+    id: number,
+    name: string,
+    email: string
+    
+}
+
+//Tipust hozhatunk letre
+
+type User ={
+    id: number;
+    name: string;
+    email: string;
+}
+
+const user : User = {
+    id:1,
+    name:"Maci",
+    email: "macimail@gmail.com"
+}
+
+console.log(user)
