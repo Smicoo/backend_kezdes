@@ -83,16 +83,81 @@ interface IUser{
 
 //Tipust hozhatunk letre
 
-type User ={
+// type User ={ 
+//     id: number;
+//     name: string;
+//     email: string;
+// }
+
+
+//Utility type
+
+interface User{
     id: number;
     name: string;
     email: string;
+    avatar?: string;
 }
 
-const user : User = {
-    id:1,
-    name:"Maci",
-    email: "macimail@gmail.com"
+const updateUser: Partial<User> = {
+    name : "Bela" //Itt nem kotelejo minden tulajdonsag
+
 }
 
-console.log(user)
+const user: Required<User> = {
+    id: 1,
+    name: "Anna",
+    email: "asd@asd.com",
+    avatar: "valami" //Minden tulajdonsag kotelezo
+}
+
+const userPreview : Pick<User, "id" | "name"> = {
+    id: 1,
+    name: "asd"
+}
+
+const userWithout : Omit<User, "id"> = {
+    name: "Anna",
+    email: "asd@asd.com",
+    avatar: "valami" //id-t ki lehet hagyni
+}
+
+const readonlyUser : Readonly<IUser> = { //1x adhatok erteket, de utana semmilyen tagjat nem modosithatjuk
+    id: 1,
+    name: "Anna",
+    email: "asd@asd.com",
+}
+
+type UserKey = keyof User
+
+let b:UserKey; //ebben csak olyanok lehetnek ami a User kulcsaival parosul
+
+function userLeker(user: User, kulcs:UserKey) {
+    return user[kulcs]
+}
+
+const userValami : User = {
+    id: 1,
+    name: "Anna",
+    email: "asd@asd.com",
+}
+
+console.log(userLeker(user, "name"))
+
+const userValami2 : User = {
+    id: 1,
+    name: "Anna",
+    email: "asd@asd.com",
+}
+
+type User2 = typeof userValami2
+
+function kiir(name: string | null): void {
+    if(name !== null){
+        console.log(name.toLocaleUpperCase())
+    }
+}
+
+const nev = user?.name ?? "unknown"
+
+//Aync műveletek
