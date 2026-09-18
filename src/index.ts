@@ -161,3 +161,16 @@ function kiir(name: string | null): void {
 const nev = user?.name ?? "unknown"
 
 //Aync műveletek
+
+const getUser = () : Promise<IUser> => {
+    return new Promise((resolve, reject) =>{
+        resolve({id: 10, name: "Maci", email:"asd@sda",})
+    })
+}
+
+async function main () : Promise<void>{
+    const user:IUser = await getUser()
+    console.log(user)
+}
+main()
+
