@@ -1,0 +1,1 @@
+Osztalydefiniciok, stb... amiket nem tipuskent akarok majd hasznalni

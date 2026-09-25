@@ -13,7 +13,7 @@ npm init -y -> package.jsont csinal
     "url": "git+https://github.com/Smicoo/backend_kezdes.git"
   },
   "keywords": [],
-  "type": "module", //commonjsrol at kell irni module ra 
+  "type": "module",                                 //commonjsrol at kell irni module ra 
   "bugs": {
     "url": "https://github.com/Smicoo/backend_kezdes/issues"
   },
@@ -31,3 +31,5 @@ ezt hozzadjuk a scripthez
 npm i -D nodemon   nodemont feltelepitjuk
 
 npx tsc --init      ezzel ts konfig megcsinalasa
+
+npm pkg set scripts.dev-ts="tsx ./src/index.ts" Valami nem volt jo ezt kiadtuk

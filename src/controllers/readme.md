@@ -1,0 +1,1 @@
+Itt lesznek azok amik a vegpontokat tartalmazzak

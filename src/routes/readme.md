@@ -1,0 +1,1 @@
+Olyan eleresi utvonalak amik kimondottan a vegpontok definiciojahoz tartoznak, itt fogjuk osszekotni a tenyleges vegpontot azzal a kulcsfuggvvennyel amely a vegponton beluli megvalositast elkesziti nekem (kis meretu fileok amikben csak utvonalak es fuggvenynevek kerulnek majd)

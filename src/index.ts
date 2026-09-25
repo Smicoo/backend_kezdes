@@ -164,13 +164,62 @@ const nev = user?.name ?? "unknown"
 
 const getUser = () : Promise<IUser> => {
     return new Promise((resolve, reject) =>{
-        resolve({id: 10, name: "Maci", email:"asd@sda",})
+        const success = true
+        if(success){
+            setTimeout(() => {
+                resolve({id: 10, name: "Maci", email:"asd@sda",})
+            }, 5000);
+        } else{
+            reject("A felhasznaloi adatok nem elerhetoek")
+        }
+        
+        
     })
 }
 
+
 async function main () : Promise<void>{
-    const user:IUser = await getUser()
-    console.log(user)
+
+    try{
+        const user:IUser = await getUser()
+        console.log(user)
+    }
+    catch{
+        console.error("Hiba")
+    }
+    
 }
 main()
 
+//fetch fuggveny
+
+interface IProducts{
+    id: number,
+    name: string,
+    category: string,
+    brand: string,
+    price: number,
+    currency: "HUF" | "EUR",
+    stock: number,
+    rating: number,
+    active: boolean,
+    description: string,
+    image: string
+}
+
+async function getProducts():Promise<IProducts[]> {
+    const response = await fetch("http://localhost:3000/products")
+    if(!response.ok){
+        throw new Error("Http error");
+    }
+    const products : IProducts[] = await response.json()
+    return products
+}
+
+try {
+    console.log(await getProducts())
+} catch (error) {
+    console.log(error)
+}
+
+//Most azert nem lesz meg jo mert nincsen felnyomva a localhost

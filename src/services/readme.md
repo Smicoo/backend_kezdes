@@ -1,0 +1,1 @@
+Szolgaltatasok, nem kimondottan backendhez kotodo dolgok
