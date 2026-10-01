@@ -33,3 +33,11 @@ npm i -D nodemon   nodemont feltelepitjuk
 npx tsc --init      ezzel ts konfig megcsinalasa
 
 npm pkg set scripts.dev-ts="tsx ./src/index.ts" Valami nem volt jo ezt kiadtuk
+
+Express lesz majd a webserver 
+
+npm i express
+
+npm i -D @types/node @types/express
+
+npm install --save-dev nodemon nemtom ezt meg hozza kellett irni valami baj volt
