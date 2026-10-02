@@ -41,3 +41,5 @@ npm i express
 npm i -D @types/node @types/express
 
 npm install --save-dev nodemon nemtom ezt meg hozza kellett irni valami baj volt
+
+dotenv -> npm i dotenv

@@ -1,15 +1,8 @@
-//Express lesz majd a webserver 
-//npm i express
-//npm i -D @types/node @types/express
+import app from "./app.js"
+import dotenv from "dotenv"
+dotenv.confing()
 
-import express from "express"; //Importalnunk kell elsonek
-import type { Request, Response } from "express";
-
-
-const app = express();
-
-app.use(express.json())      
-
+const PORT = process.env.PORT || 3000
 
 app.get('/', (_req, res) =>{
     res.send("A szerver fut") //Erre a get keresre ez a valasz fog erkezni
@@ -20,7 +13,11 @@ app.post('/', (req:Request, res:Response) =>{
     res.send(req.body)
 })
 
-app.listen(3000, () =>{
+app.listen(PORT, () =>{
     console.log("Fut az express webszerver")
 })
 
+app.post('/product', (req:Request, res:Response) =>{
+    console.log(req.body)
+    res.send(req.body)
+})
